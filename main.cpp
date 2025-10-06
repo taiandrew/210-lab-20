@@ -1,3 +1,6 @@
+// COMSC 210 | Lab 20 | 10/06/2025
+// IDE: VS Code
+
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
