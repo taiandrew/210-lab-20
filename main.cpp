@@ -14,7 +14,7 @@ public:
     // constructors
     Chair() {
         // 3 or 4 legs
-        legs = rand() % 2 + 2;
+        legs = rand() % 2 + 3;
 
         // Random price between 100.00 and 999.99
         prices = new double[SIZE];
@@ -65,7 +65,7 @@ int main() {
     chairPtr->print();
 
     //creating dynamic chair object with constructor
-    Chair *livingChair = new Chair(3);
+    Chair *livingChair = new Chair;
     livingChair->setPrices(525.25, 434.34, 252.52);
     livingChair->print();
     delete livingChair;
