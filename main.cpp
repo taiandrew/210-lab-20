@@ -3,6 +3,8 @@
 
 using namespace std;
 const int SIZE = 3;
+const int MIN = 10000, MAX = 99999;
+
 
 class Chair {
 private:
@@ -12,9 +14,16 @@ public:
     // constructors
     Chair() {
         prices = new double[SIZE];
-        legs = 0;
-        for (int i = 0; i < SIZE; i++)
-            prices[i] = 0;
+
+        // 3 or 4 legs
+        legs = rand() % 2 + 2;
+        // Random price between 100.00 and 999.99
+        for (int i = 0; i < SIZE; i++) {
+            double price = (rand() % (MAX-MIN+1) + MIN) / (double) 100;
+            prices[i] = price;
+        }
+            
+            
     }
     Chair(int l) {
         prices = new double[SIZE];
