@@ -13,23 +13,21 @@ private:
 public:
     // constructors
     Chair() {
-        prices = new double[SIZE];
-
         // 3 or 4 legs
         legs = rand() % 2 + 2;
+
         // Random price between 100.00 and 999.99
+        prices = new double[SIZE];
         for (int i = 0; i < SIZE; i++) {
             double price = (rand() % (MAX-MIN+1) + MIN) / (double) 100;
             prices[i] = price;
         }
-            
-            
     }
-    Chair(int l) {
-        prices = new double[SIZE];
+    Chair(int l, double p[SIZE]) {
         legs = l;
+        prices = new double[SIZE];
         for (int i = 0; i < SIZE; i++)
-            prices[i] = 0;
+            prices[i] = p[i];
     }
 
     // setters and getters
